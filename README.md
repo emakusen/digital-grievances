@@ -76,6 +76,25 @@ The pipeline generates:
 - `validation_crosstab_*.csv`
 - `top_comments_per_archetype.csv`
 
+## Dataset
+A sample dataset is provided for testing purposes. The dataset counts 5000 samples randomly sampled from our 1.4 million grievance dataset extracted from YouTube and paraphrased via Qwen2.5:7b-instruct using the following prompt:
+
+```bash
+Rewrite this YouTube comment as if it was written by another person.
+
+Rules:
+- Preserve the exact meaning.
+- Preserve the grievance.
+- Preserve sentiment and emotional intensity.
+- Preserve insults, profanity, sarcasm, and slang if present.
+- Do not add new information.
+- Do not remove information.
+- If the original comment is not English, rewrite it naturally in English.
+- Do not explain.
+- Do not use quotation marks.
+- Return only the rewritten comment.
+```
+
 ## Citation
 
 If you use this repository, please cite:
